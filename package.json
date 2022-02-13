@@ -1,0 +1,7 @@
+{
+    "scripts": {
+        "initproject": "cd ./api && yarn install && cd .. && cd ./client && yarn install",
+        "server": "cd ./api && yarn dev",
+        "client": "cd ./client && yarn start"
+    }
+}
