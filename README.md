@@ -8,7 +8,7 @@
 Run the following command to download the project (`client` and `server`).
 
 ```bash
-git clone <bash>
+git clone https://github.com/AugustinLegrand/projet_12_13_02_2022.git
 ```
 
 After downloading the project with the ``client`` and the ``server``, you need to run the following command to download the dependencies necessary for the proper functioning of the two applications.
