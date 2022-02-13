@@ -1,0 +1,51 @@
+.user-infos {
+    margin-top: 68px;
+    margin-left: 224px;
+    margin-bottom: 77px;
+}
+
+.user-infos h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 24px;
+    margin-bottom: 44px;
+}
+
+.user-infos h1 span {
+    color: #E60000;
+}
+
+.user-infos p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.user-container {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.user-analytics {
+
+}
+
+.user-test {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-test div {
+    display: flex;
+    align-items: center;
+}
+
+.stats-container .stats {
+    margin-bottom: 71px;
+}

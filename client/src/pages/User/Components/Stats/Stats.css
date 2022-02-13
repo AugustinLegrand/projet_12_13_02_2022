@@ -1,0 +1,28 @@
+.stats {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+.stats-icon {
+    display: flex;
+    align-items: center;
+}
+
+.stats-info {
+    margin-left: 24px;
+}
+
+.stats-value {
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.stats-name {
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
