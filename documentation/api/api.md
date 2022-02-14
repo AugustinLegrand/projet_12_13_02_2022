@@ -1,5 +1,7 @@
 # **API DOCUMENTATION**
 
+[documentation](../documentation.md)
+
 *The SportSee ``API`` provides access to information about a ``user``'s statistics.*
 
 ## **Routes**
@@ -20,17 +22,17 @@
     "data": {
         "id": 12,
         "userInfos": {
-        "firstName": "Karl",
-        "lastName": "Dovineau",
-        "age": 31
-    },
-    "todayScore": 0.12,
-    "keyData": {
-        "calorieCount": 1930,
-        "proteinCount": 155,
-        "carbohydrateCount": 290,
-        "lipidCount": 50
-    }
+            "firstName": "Karl",
+            "lastName": "Dovineau",
+            "age": 31
+        },
+        "todayScore": 0.12,
+        "keyData": {
+            "calorieCount": 1930,
+            "proteinCount": 155,
+            "carbohydrateCount": 290,
+            "lipidCount": 50
+        }
     }
 }
 ```
@@ -203,17 +205,17 @@ This returns me exactly the following ``response``
     "data": {
         "id": 12,
         "userInfos": {
-        "firstName": "Karl",
-        "lastName": "Dovineau",
-        "age": 31
-    },
-    "todayScore": 0.12,
-    "keyData": {
-        "calorieCount": 1930,
-        "proteinCount": 155,
-        "carbohydrateCount": 290,
-        "lipidCount": 50
-    }
+            "firstName": "Karl",
+            "lastName": "Dovineau",
+            "age": 31
+        },
+        "todayScore": 0.12,
+        "keyData": {
+            "calorieCount": 1930,
+            "proteinCount": 155,
+            "carbohydrateCount": 290,
+            "lipidCount": 50
+        }
     }
 }
 ```

@@ -7,6 +7,14 @@
 *The SportSee ``API`` provides access to information about a ``user``'s statistics.*
 
 > ❗ *Some routes will require ``Authentification``*
->
+
 
 [Access the SportSee API documentation](./api/api.md)
+
+
+### **CLIENT DOCUMENTATION**
+
+*SportSee ``client`` application documentation.
+Retrieve ``data`` from ``API`` and display it.*
+
+[Access client application documentation](./client/client.md)
