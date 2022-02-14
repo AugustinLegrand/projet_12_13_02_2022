@@ -75,3 +75,4 @@ yarn client
 * [Express](https://expressjs.com/fr/) | *Infrastructure Web minimaliste, souple et rapide pour [NodeJS](https://fr.reactjs.org/)*
 * [Idx](https://www.npmjs.com/package/idx) | *is a utility function for traversing properties on objects and arrays.*
 
+# **[Access the documentation](./documentation/documentation.md)**
