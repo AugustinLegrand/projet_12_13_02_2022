@@ -3,24 +3,22 @@ import { useState } from "react/cjs/react.development";
 import { Cell, Label, Pie, PieChart, Text } from "recharts";
 import { findID } from "../services/UserService";
 
-export default function ScoreAnalytics() {
+export default function ScoreAnalytics(props) {
 
     const [user, setUser] = useState(null)
 
     useEffect(() => {
         async function getUser() {
-            const response = await findID(12)
+            const response = await findID(props.userID)
             const data = []
 
             data.push(
                 {
-                    //value: (response.todayScore && response.todayScore) * 100 || (response.score && response.score) * 100,
-                    value: 60,
+                    value: (response.todayScore && response.todayScore) * 100 || (response.score && response.score) * 100,
                     hidden: false
                 },
                 {
-                    //value: 100 - ((response.todayScore && response.todayScore * 100) || (response.score && response.score) * 100),
-                    value: 40,
+                    value: 100 - ((response.todayScore && response.todayScore * 100) || (response.score && response.score) * 100),
                     hidden: true
                 }
             )
@@ -69,7 +67,6 @@ export default function ScoreAnalytics() {
                 cy={100}
                 startAngle={-270}
                 labelLine={false}
-                r
                 innerRadius={80} 
                 outerRadius="100%"
                 fill="#FF0000"
@@ -77,7 +74,7 @@ export default function ScoreAnalytics() {
                     <Label width={50} position="center" content={<CustomLabel value1={(user[0].value) + "%"} value2={"de votre objectif"} />}>
                     </Label>
                     {
-                        user && user.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]} display={(user.hidden === true) ? "none" : ""} />)
+                        user && user.map((entry, index) => <Cell key={index} fill={COLORS[index % COLORS.length]} display={(user.hidden === true) ? "none" : ""} />)
                     }
                 
             </Pie>

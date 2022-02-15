@@ -4,7 +4,7 @@ export default function HeaderComponent() {
 
     return (
         <div className="header">
-            <img className="header-logo" src="./../logo.svg" alt="Logo SportSee" />
+            <img className="header-logo" src="../../logo.svg" alt="Logo SportSee" />
             <nav className='header-navbar'>
                 <ul>
                     <li>

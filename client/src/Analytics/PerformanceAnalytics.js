@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { PolarAngleAxis, PolarGrid, Radar, RadarChart, ResponsiveContainer } from "recharts";
+import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts";
 import { getPerf } from "../services/UserService";
 import './Analytics.css'
 
-export default function PerformanceAnalytics() {
+export default function PerformanceAnalytics(props) {
 
     const [data, setData] = useState(null)
 
     useEffect(() => {
         async function getPerformance() {
-            const response = await getPerf(18)
+            const response = await getPerf(props.userID)
             const newData = []
 
             if (!response) return

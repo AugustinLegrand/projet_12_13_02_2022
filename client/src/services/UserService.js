@@ -1,28 +1,76 @@
 import Axios from "axios"
 
-async function findID(id) {
-    const response = await Axios.get('http://localhost:3333/user/'+id)
+const mockee = true
 
-    return response.data.data
+async function findID(id) {
+
+    let userData = {}
+    
+    if (mockee === true) {
+        console.log("MOCKEE");
+        const response = await fetch('../../user/12.json')
+        const data = await response.json()
+        userData = data.data
+    } else {
+        const response = await Axios.get('http://localhost:3333/user/'+id)
+        userData = response.data.data
+    }
+
+    console.log("USER : ", userData);
+
+    return userData
 }
 
 async function getAvarageSession(id) {
-    const response = await Axios.get('http://localhost:3333/user/'+id+'/average-sessions')
 
+    let userData = {}
+    
+    if (mockee === true) {
+        console.log("MOCKEE");
+        const response = await fetch('../../user/12/average-sessions.json')
+        const data = await response.json()
+        userData = data.data
+    } else {
+        const response = await Axios.get('http://localhost:3333/user/'+id+'/average-sessions')
+        userData = response.data.data
+    }
 
-    return response.data.data
+    return userData
 }
 
 async function getActivity(id) {
-    const response = await Axios.get('http://localhost:3333/user/'+id+"/activity")
 
-    return response.data.data
+    let userData = {}
+    
+    if (mockee === true) {
+        console.log("MOCKEE");
+        const response = await fetch('../../user/12/activity.json')
+        const data = await response.json()
+        userData = data.data
+    } else {
+        const response = await Axios.get('http://localhost:3333/user/'+id+'/activity')
+        userData = response.data.data
+    }
+
+    return userData
 }
 
 async function getPerf(id) {
-    const response = await Axios.get('http://localhost:3333/user/'+id+"/performance")
 
-    return response.data.data
+    let userData = {}
+    
+    if (mockee === true) {
+        console.log("MOCKEE");
+        const response = await fetch('../../user/12/performance.json')
+        const data = await response.json()
+        userData = data.data
+    } else {
+        const response = await Axios.get('http://localhost:3333/user/'+id+'/performance')
+        userData = response.data.data
+    }
+    
+
+    return userData
 }
 
 

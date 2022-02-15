@@ -3,13 +3,13 @@ import { Legend, Line, LineChart, Tooltip, XAxis } from "recharts";
 import { getAvarageSession } from "../services/UserService";
 import './Analytics.css'
 
-export default function ObjectifsAnalytics() {
+export default function ObjectifsAnalytics(props) {
 
     const [data, setData] = useState(null)
 
     useEffect(() => {
         async function getSession() {
-            const response = await getAvarageSession(12)
+            const response = await getAvarageSession(props.userID)
             setData(response)
         }
 

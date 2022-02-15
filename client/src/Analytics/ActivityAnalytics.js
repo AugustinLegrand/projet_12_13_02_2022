@@ -3,13 +3,13 @@ import { Bar, BarChart, CartesianGrid, Legend, PolarGrid, Tooltip, XAxis, YAxis 
 import { getActivity } from "../services/UserService";
 import './Analytics.css'
 
-export default function ActivityAnalytics() {
+export default function ActivityAnalytics(props) {
 
     const [data, setData] = useState(null)
 
     useEffect(() => {
         async function getActivities() {
-            const response = await getActivity(12)
+            const response = await getActivity(props.userID)
 
             setData(response.sessions)
         }

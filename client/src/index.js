@@ -15,9 +15,7 @@ ReactDOM.render(
     <HeaderComponent />
     <Routes>
       <Route exact path='/' element={<HomePage />} />
-      <Route path='/user' element={<UserPage />}>
-        <Route path=':userID' element={<UserPage />} />
-      </Route>
+      <Route path='/user/:userID' element={<UserPage />} />
       <Route path='*' element={<ErrorPage />} />
     </Routes>
   </BrowserRouter>,
